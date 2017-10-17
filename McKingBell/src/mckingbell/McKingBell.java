@@ -8,6 +8,7 @@ package mckingbell;
 import stack.LinkedStack;
 import queue.LinkedDequeue;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -24,13 +25,22 @@ public class McKingBell {
         LinkedStack<Integer> fries = new LinkedStack<>();
         LinkedDequeue<Burger> burgers = new LinkedDequeue<>();
         
-        for( int makeFood = 1; makeFood <= 5; makeFood++ ){
             makeSomeFries(5, fries);
             makeSomeBurgers(5, 0, burgers);
-        }
-        
+          
+//this is meant to test whats being added        
+//        while(!burgers.isEmpty()){
+//            System.out.println(burgers.removeFront().lifeTime);
+//        }
+//
         for( int minutes = 0; minutes < 120; minutes++ ){
-            //TODO 
+            Random random = new Random();
+            int newCar = random.nextInt(3)+1;
+            
+            //create new car
+            if( newCar == 3 ){
+                Car carInLine = new Car( minutes );
+            }
         }
         
     }

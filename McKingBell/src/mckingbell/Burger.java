@@ -11,7 +11,6 @@ package mckingbell;
  */
 public class Burger {
     public int lifeTime;
-    
     public Burger( int startTime ){
         this.lifeTime = startTime;
     }
