@@ -46,6 +46,23 @@ public class LinkedStack<T> implements StackInterface<T> {
         firstItem = null;
     }
     
+//    public int getSize(){
+//        int count = 0;
+//        return getSize( firstItem, count );
+//    }
+//    
+//    private int getSize( Node currentItem, int count ){
+//        for( int n = 0; n < 5; n++ ){
+//            if( currentItem.data == null ){
+//                return count;
+//            }else{
+//                count++;
+//                getSize( currentItem.next, count );
+//            }
+//        }
+//        return count;
+//    }
+    
     private class Node
     {
         private T data;
