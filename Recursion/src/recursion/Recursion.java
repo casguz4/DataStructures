@@ -5,10 +5,6 @@
  */
 package recursion;
 
-/**
- *
- * @author etcharn1
- */
 public class Recursion {
 
     /**
