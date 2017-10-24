@@ -12,6 +12,7 @@ package stack;
 public class LinkedStack<T> implements StackInterface<T> {
 
     private Node firstItem;
+    private int numberOfItems;
     
     public LinkedStack()
     {
@@ -22,6 +23,7 @@ public class LinkedStack<T> implements StackInterface<T> {
     public T pop() {
         T item = peek();
         firstItem = firstItem.next;
+        numberOfItems--;
         return item;
     }
 
@@ -34,6 +36,7 @@ public class LinkedStack<T> implements StackInterface<T> {
     public void push(T item) {
         Node newNode = new Node(item, firstItem);
         firstItem = newNode;
+        numberOfItems++;
     }
 
     @Override
@@ -44,24 +47,13 @@ public class LinkedStack<T> implements StackInterface<T> {
     @Override
     public void clear() {
         firstItem = null;
+        numberOfItems = 0;
     }
     
-//    public int getSize(){
-//        int count = 0;
-//        return getSize( firstItem, count );
-//    }
-//    
-//    private int getSize( Node currentItem, int count ){
-//        for( int n = 0; n < 5; n++ ){
-//            if( currentItem.data == null ){
-//                return count;
-//            }else{
-//                count++;
-//                getSize( currentItem.next, count );
-//            }
-//        }
-//        return count;
-//    }
+    @Override
+    public int getSize(){
+        return numberOfItems;
+    }
     
     private class Node
     {

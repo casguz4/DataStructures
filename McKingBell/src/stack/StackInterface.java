@@ -15,4 +15,5 @@ public interface StackInterface<T> {
     void push(T item);
     boolean isEmpty();
     void clear();
+    int getSize();
 }

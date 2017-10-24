@@ -87,6 +87,10 @@ public class LinkedDequeue<T>{
         public boolean isEmpty(){
             return first == null && last == null;
         }
+
+    public int getSize() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
     private class Node<T>{
         
